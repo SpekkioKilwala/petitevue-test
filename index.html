@@ -4,8 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://unpkg.com/petite-vue" defer init></script>
 </head>
 <body>
-  
+  <div>
+    This is normal text that should display normally.
+  </div>
+  <div v-scope="{ count: 0 }">
+    {{ count }}
+    <button @click="count++">inc</button>
+  </div>
 </body>
 </html>
